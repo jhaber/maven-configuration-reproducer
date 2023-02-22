@@ -17,7 +17,7 @@ Checking `child` module configuration with:
 ✅ Prints `0`, meaning the configuration does not contain an `outputFile` parameter, which is expected  
 
 Checking `child` module configuration with:  
-`(cd child && ../apache-maven-3.8.7/bin/mvn help:effective-pom -pl child -N | grep outputFile | wc -l)`  
+`(cd child && ../apache-maven-3.8.7/bin/mvn help:effective-pom -N | grep outputFile | wc -l)`  
 ✅ Prints `0`, meaning the configuration does not contain an `outputFile` parameter, which is expected  
 
 Checking `nested-child` module configuration with:  
@@ -25,7 +25,7 @@ Checking `nested-child` module configuration with:
 ✅ Prints `0`, meaning the configuration does not contain an `outputFile` parameter, which is expected  
 
 Checking `nested-child` module configuration with:  
-`(cd child/nested-child && ../../apache-maven-3.8.7/bin/mvn help:effective-pom -pl child/nested-child -N | grep outputFile | wc -l)`  
+`(cd child/nested-child && ../../apache-maven-3.8.7/bin/mvn help:effective-pom -N | grep outputFile | wc -l)`  
 ✅ Prints `0`, meaning the configuration does not contain an `outputFile` parameter, which is expected  
 
 Checking all modules with:  
@@ -43,7 +43,7 @@ Checking `child` module configuration with:
 ✅ Prints `0`, meaning the configuration does not contain an `outputFile` parameter, which is expected  
 
 Checking `child` module configuration with:  
-`(cd child && ../apache-maven-3.9.0/bin/mvn help:effective-pom -pl child -N | grep outputFile | wc -l)`  
+`(cd child && ../apache-maven-3.9.0/bin/mvn help:effective-pom -N | grep outputFile | wc -l)`  
 ✅ Prints `0`, meaning the configuration does not contain an `outputFile` parameter, which is expected  
 
 Checking `nested-child` module configuration with:  
@@ -51,7 +51,7 @@ Checking `nested-child` module configuration with:
 ❌ Prints `1`, meaning the configuration contains an `outputFile` parameter, which is NOT expected  
 
 Checking `nested-child` module configuration with:  
-`(cd child/nested-child && ../../apache-maven-3.9.0/bin/mvn help:effective-pom -pl child/nested-child -N | grep outputFile | wc -l)`  
+`(cd child/nested-child && ../../apache-maven-3.9.0/bin/mvn help:effective-pom -N | grep outputFile | wc -l)`  
 ✅ Prints `0`, meaning the configuration does not contain an `outputFile` parameter, which is expected  
 
 Checking all modules with:  
