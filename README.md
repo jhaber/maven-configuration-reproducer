@@ -1,6 +1,6 @@
 # maven-configuration-reproducer
 
-During Maven 3.9.0 upgrade we noticed a change in behavior in how configuration is parsed. It seems to manifest when you try to clear plugin configuration, while also reconfiguring that same plugin inside a profile (in the same pom). In this case it looks like:
+During Maven 3.9.0 upgrade we noticed a change in behavior in how configuration is parsed. It seems to manifest when you try to clear plugin configuration, while also reconfiguring that same plugin inside a profile (in the same pom). The setup in this repo is:
 - `parent` module configures the shade plugin with an `outputFile` parameter
 - `child` module clears this configuration
 - `child` module also adds a `finalName` parameter to the shade plugin, inside a profile
