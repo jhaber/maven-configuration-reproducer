@@ -10,7 +10,7 @@ During Maven 3.9.0 upgrade we noticed a change in behavior in how configuration 
 
 It is expected that `child` and `nested-child` do not inherit the `outputFile` parameter, because the shade configuration is removed in `child` pom.xml. This works in Maven 3.8.7, but in Maven 3.9.0 the `nested-child` module does inherit the `outputFile` parameter. I assume this has something to do with the profile getting activated and causing the configuration to not get merged properly, but I'm not sure. 
 
-I also built a custom version of Maven 3.9.0 which uses plexus-utils 3.3.1, and the behavior is back to normal. So I think the behavior change is in plexus-utils (although it could be that Maven is "mis-using" plexus-utils, and the plexus-utils change is technically correct). I tested with a few different plexus-utils versions and it seems like the behavior change was introduced in plexus-utils 3.4.0. 
+I also built a custom version of Maven 3.9.0 which uses plexus-utils 3.3.1, and the behavior is back to normal. So I think the behavior change is in plexus-utils (although it could be that Maven is "mis-using" plexus-utils, and the plexus-utils change is technically correct). I tested with a few different plexus-utils versions and it seems like the behavior change was introduced in plexus-utils 3.4.0 (I also tested with plexus-utils 3.5.0 and this issue is not fixed). 
 
 ### Observed behavior with Maven 3.8.7 (which uses plexus-utils 3.3.1)
 
